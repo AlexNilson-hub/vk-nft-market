@@ -36,15 +36,15 @@ const Navigation = ({ children }) => {
           >
             <Icon24ServicesOutline width={24} height={24} />
           </TabbarItem>
-          <TabbarItem
-            onClick={onClick}
-            selected={activeViewId === views.HELP}
-            data-story={routes.HELP}
-            text={t('Помощь')}
-            role="button"
-          >
-            <Icon24HelpOutline width={24} height={24} />
-          </TabbarItem>
+          {/*<TabbarItem*/}
+          {/*  onClick={onClick}*/}
+          {/*  selected={activeViewId === views.HELP}*/}
+          {/*  data-story={routes.HELP}*/}
+          {/*  text={t('Помощь')}*/}
+          {/*  role="button"*/}
+          {/*>*/}
+          {/*  <Icon24HelpOutline width={24} height={24} />*/}
+          {/*</TabbarItem>*/}
           <TabbarItem
             onClick={onClick}
             selected={activeViewId === views.CALENDAR}
