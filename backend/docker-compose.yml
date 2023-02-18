@@ -1,0 +1,26 @@
+services:
+  backend:
+    build: .
+    volumes:
+      - ../common:/usr/src/app/common
+      - .:/usr/src/app/backend
+    image: ical:backend
+    container_name: ical-backend
+    ports:
+      - 5000:5000
+  postgres-dev:
+    image: library/postgres:12
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: ical
+    ports:
+      - 5432:5432
+  postgres-test:
+    image: library/postgres:12
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: ical_test
+    ports:
+      - 5433:5432
